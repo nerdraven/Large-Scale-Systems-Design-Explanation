@@ -1,6 +1,6 @@
 # Large-Scale-System-Design
 
-This repository contains the explanation of how large systems are designed and scaled.
+This repository contains designs about how to built scale systems in detail.
 In designing procedure;
 
 - What system requirements are
@@ -12,19 +12,19 @@ In designing procedure;
 - What replication, sharding, load balancer is and how they are used
 - How caching mechanism is used
 - How system is designed at final stage
-
-are explained in detail.
+- Which cloud services can be used are explained in detail.
 
 ------- SYSTEMS THAT ARE EXPLAINED -----------
 
-- Design A Web System Like PasteBin
-- Design System Like Youtube
-- Design Twitter
-- Design a Service Like Messenger
-- Design a URL Shortening Service
-- Design a system like Instagram
-- Like Frequent Terms Suggestion
-- Online-mutual-book-writing-application
-- Design Social Network System Search like a Twitter Search
-- Design Top Query Suggestion System
-- Design a System like Yelp
+- Foursquare Design
+- Yelp Design
+- Instagram Design
+- Youtube Design
+- Twitter Design
+- Facebook Messenger Design 
+- URL Shortening Service Design
+- Frequent Terms Suggestion Design
+- Online-mutual-book-writing-application Design
+- Twitter Search Design
+- Top Query Suggestion System Design
+- PasteBin Design
