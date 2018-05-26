@@ -10,22 +10,21 @@ users reach this system any platform like a desktop application or mobile applic
 * There are typically 3 types of requirements. First one is functional requirements, the second one is nonfunctional requirements and the 
 third one is extended requirements. During the development process, we should determine all three requirements clearly.
 Users can register and login.
-```bash
-Users can log out.
-When users log in, they can share or read tweets.
-When users don't register or log in, they can only read tweets.
-Users can follow other users.
-Users can mark some tweets as a favourite.
-The system should be highly reliable. This means that no of post should be lost.
-The system should be highly available. This means that users should reach this system whenever they want.
-The system should return the requests with minimum latency. This means that users should reach the posts nearly real lime.
-The system can be monitored. For this purpose, we can keep the location of users, or location of shared tweets.
-During the development of the system, REST or SOAP API's can be used. (REST API is a little bit good option)
-When users post tweets, these tweets can contain any file or photo. Notice that, if we design a system like Twitter, we can determine the acceptable latency like as a 300 ms.
-Consistency can be acceptable if the system gives the request properly later.
-Users can search the tweets during the travel the site.
-Finally, people can answer the tweets.
-```
+
+* Users can log out.
+* When users log in, they can share or read tweets.
+* When users don't register or log in, they can only read tweets.
+* Users can follow other users.
+* Users can mark some tweets as a favourite.
+* The system should be highly reliable. This means that no of post should be lost.
+* The system should be highly available. This means that users should reach this system whenever they want.
+* The system should return the requests with minimum latency. This means that users should reach the posts nearly real lime.
+* The system can be monitored. For this purpose, we can keep the location of users, or location of shared tweets.
+* During the development of the system, REST or SOAP API's can be used. (REST API is a little bit good option)
+* When users post tweets, these tweets can contain any file or photo. Notice that, if we design a system like Twitter, we can determine the acceptable latency like as a 300 ms.
+* Consistency can be acceptable if the system gives the request properly later.
+* Users can search the tweets during the travel the site.
+* Finally, people can answer the tweets.
 
 ## Capacity and Estimation
 
@@ -82,13 +81,10 @@ and metadata servers.
 We need to store information about users and tweets. Notice that we can use SQL or NoSQL but if we use NoSQL then we should keep (user, 
 tweet)
 
-```bash
--Tweet (TweetID:bigInt, Content, CreationDate, Tweet Location, NumberOfFavourites) - (Except Content all of the information will be kept 
-in metadata storages)
-- Users (UserID:bigInt, Name, Email, Age, LastLogin)
-- UserFollow (UserID1, UserID2)
-- UserFavourite (UserID, TweetID, FavouriteDate)
-```
+* **Tweet (TweetID:bigInt, Content, CreationDate, Tweet Location, NumberOfFavourites) - (Except Content all of the information will be kept in metadata storages)**
+* **Users (UserID:bigInt, Name, Email, Age, LastLogin)**
+* **UserFollow (UserID1, UserID2)**
+* **UserFavourite (UserID, TweetID, FavouriteDate)**
 
 Additionally, when creating TweetID or UserID we can use Key generation service. Key generation service creates all the possible ID's 
 and stores the KGS Databases before. There are two tables. First one is usedKeys second one is nonUsedKeys. notice that, any of two 
