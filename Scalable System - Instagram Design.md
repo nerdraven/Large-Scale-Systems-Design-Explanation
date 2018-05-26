@@ -1,4 +1,4 @@
-## WHAT IS INSTAGRAM?
+### WHAT IS INSTAGRAM?
 
 * Do you really know the Instagram? Instagram is one of the best social media platforms in today's world. 
 Most of the people use the Instagram every day effectively and continuously.  This causes that Instagram is under heavy-traffic. 
@@ -9,7 +9,7 @@ Additionally, you can follow other users. If you are using Instagram, you can re
 important topic for Instagram because every user meet this system in its timeline and timeline creation time is so important under 
 this conditions.
 
-## REGUIREMENTS AND GOALS OF SYSTEM?
+### REGUIREMENTS AND GOALS OF SYSTEM?
 
 * As you know, if you need to design your design carefully, you should focus three requirement topics which are functional, nonfunctional,
 extended requirements.
@@ -47,7 +47,7 @@ and minimum latency are two main points of consideration.
 **Note: Instagram is a huge system and I didn't deal with the comment process, recommendations and tags. Recommendation 
 systems are another important system that it should be designed carefully.
 
-## CAPACITY AND ESTIMATION
+### CAPACITY AND ESTIMATION
 
 When we talk about the define capacity and estimation we should think the future of the system. To illustrate this, we can deal with 
 the data that collect up to 5 or 10 years. It helps us to scale easily. Let's assume the total user count of Instagram is 500 Million 
@@ -56,7 +56,7 @@ Notice that we can think the average size of the picture is 500 KB so total requ
 20 Million * 500 KB = 10 * 10^12 = 10 TB. Total space required for 5 years can easily be estimated. 
 Note that, this capacity doesn't contain replicate data. Additionally, we should just only use until 80% of total existing capacity.
 
-## API DESIGN
+### API DESIGN
 
 ** We can use REST or SOAP to server our APIs. Basically, there are three important API of our system.
 
@@ -73,7 +73,7 @@ like count, dislike count, total view count.**
 
 There are a lot of another APIs to design Instagram, however, these three APIs are more important than the others.
 
-## DATABASE SCHEMA
+### DATABASE SCHEMA
 
 ** As you know, we have talked about the pictures and users basically. We have to decide whether to use SQL or NoSQL before defining 
 database tables. We can use RDBMS to keep data but as you know, scale process of a traditional database system is hard when 
@@ -114,7 +114,7 @@ picture. (For NoSQL)
 
 * **Note: We need to have an index on PictureID and CreationDate because we need to get hottest pictures.
 
-## COMPONENT DESIGN
+### COMPONENT DESIGN
 
 * We can realize that uploading and downloading operation are not same. Uploading operation is slower than downloading operation because 
 uploading operation just based on disk. On the other hand, read operation could be faster if we are using a cache.
@@ -124,7 +124,7 @@ the system may not respond to read operation. If we divide uploading and downloa
 then we can handle this bottleneck. Notice that, web servers have connection limits at any time and we need to focus on this point. 
 Notice that, separating of uploading and downloading operations ensure that system can be more scalable and optimize.
 
-## HIGH LEVEL SYSTEM DESIGN
+### HIGH LEVEL SYSTEM DESIGN
 
 * If we are designing a system, the basic concepts we need are;
 
@@ -144,7 +144,7 @@ There are two separate services in this system, which are upload image and downl
 A database is used to save all information about users and pictures. (metadata). When a request comes to the system, the first to 
 meet request is the web servers. Web servers redirect an incoming request to application servers.
 
-## REPLICATION AND REDUNDANCY
+### REPLICATION AND REDUNDANCY
 
 Replication is a very important concept to provide availability and reliability. As we said, Instagram should ensure that any files 
 cannot be lost. Replication is a very important concept to handle a failure of services or servers. Replication and redundancy basically
@@ -154,7 +154,7 @@ if we divide incoming requests into more resources rather than one resource, the
 In addition, the optimum number of a replica to each resource is 3 or more. Thanks to replications, if any server dies, the system 
 continues to respond via secondary resource.
 
-## DATA SHARDING
+### DATA SHARDING
 
 As you know, sharding is a very important concept which helps system to keep data into different resources according to sharding 
 process. There can be two sharding procedure to use. First is partitioning based on UserID and second is partitioning based on PhotoID.
@@ -168,7 +168,7 @@ number of shards. We can handle the non-uniform distribution problem and popular
 Key Generation Service. Key Generation Service creates unique identifiers at first then serve this unique identifier to incoming 
 pictures. This helps us to handle PhotoID problem.
 
-## CACHING
+### CACHING
 
 Cache memory is a crucial part of reading data faster. Cache memory usage can base on 80-20 rule. This means that cache capacity is 
 the 20% of the daily data size. We can use LRU cache policy (Least Recently Used).
@@ -176,7 +176,7 @@ the 20% of the daily data size. We can use LRU cache policy (Least Recently Used
 * CDN: CDN, Content Delivery Network is for distributed file cache servers. We can usage CDN for keeping pictures.
 * Memcache / Redis: Keep metadata in the cache with Memcache or Redis.
 
-## LOAD BALANCER
+### LOAD BALANCER
 
 * Load balancer allows incoming requests to be redirected to resources according to certain criteria. We can use load balancer at every 
 layer of the system.
@@ -190,7 +190,7 @@ layer of the system.
 Round Robin method doesn't deal with the situation that any server is under heavy-traffic. We can modify Round Robin method to be 
 a more intelligent method to handle this problem.
 
-## DESIGN CONSIDERATION
+### DESIGN CONSIDERATION
 
 Notice that we need to get the popular, latest and relevant photos of other people that we follow. We can use a pre-generate timeline 
 to decrease latency because you image that system will fetch all friends of us firstly then fetch all pictures of our friends. 
@@ -208,7 +208,7 @@ users that follow a lot of users.
 * Hybrid: Hybrid method is a combination of pull and push methods. Push method is for users that follow few users and pull 
 method is for users that follow a lot of users.
 
-## BASIC CODING OF THE SYSTEM
+### BASIC CODING OF THE SYSTEM
 
 ```bash
 public class Server{
