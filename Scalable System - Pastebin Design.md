@@ -1,10 +1,10 @@
-## What this website looks like?
+### WHAT IS PASTEBIN
 
 * This website helps users to upload and store text plain or image in cloud platforms. Users can easily reach this plain text or image 
 with given unique URL. Additionally, other users can easily reach plaint text or image shared by other users by accessing URL. 
 Additionally, users can share plain text or image with private or public options.
 
-## System Requirements and Goals of the system
+### SYSTEM REQUIREMENTS AND GOALS OF SYSTEM
 
 * Users should upload and store plain text and image then take a unique URL. Users should reach their uploaded plain text and image by 
 entering this given unique URL. Users should choose public or private properties to determine which users can see files or which users 
@@ -46,7 +46,7 @@ For caching we can use %20 rules. This means that in a day 10 GB / 5 = 2 GB cach
 * We can basically prefer REST API for this website. Basically three API first is uploadFile(key, URL, text, private = none) return 
 uniqueURL, second one is readFile(key, URL) redirect original URL, third one is deleteFile(key, URL) return HTTP response(SUCCESS or FAIL)
 
-## Database
+### DATABASE
 
 * We can prefer NoSQL databases like Dynamo or Cassandra. Because there is huge data and no relationship between URLs, this is the good 
 option. We can quickly obtain the data by using NoSQL. Basically, three table should be. First one is File, User, File and User.
@@ -70,17 +70,17 @@ Block cache
 Metadata cache
 All services have two or more replica servers.
 
-### Replication and Data partitioning
+### REPLICATION AND DATA PARTITIONING
 
 We can use sharding (horizontal partitioning for this system). In addition, data replication can be used. (Each server has two or more 
 copy server). The hash-based partition should be used to provide balancing.
 
-### Caching
+### CACHING
 
 Notice that we use %20 rules for caching. In addition, block storage cache and metadata storage cache can be used. an LRU mechanism 
 can prefer for caching
 
-### Load Balancer
+### LOAD BALANCER
 
 We can use Round Robin principle but this principle has an important problem. This cannot handle if server is busy or fail, it 
 continue to redirect busy or fail server. We can create more intelligent load balancer principle for this problem.
