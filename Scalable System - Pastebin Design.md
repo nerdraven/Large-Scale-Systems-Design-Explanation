@@ -51,7 +51,7 @@ uniqueURL, second one is readFile(key, URL) redirect original URL, third one is 
 * We can prefer NoSQL databases like Dynamo or Cassandra. Because there is huge data and no relationship between URLs, this is the good 
 option. We can quickly obtain the data by using NoSQL. Basically, three table should be. First one is File, User, File and User.
 
-## Let's first think about basic system design
+### Let's first think about basic system design
 
 * Storage can be divided into two parts.
 a-) Metadata storage
