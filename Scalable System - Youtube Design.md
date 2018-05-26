@@ -1,4 +1,4 @@
-## WHAT IS YOUTUBE?
+### WHAT IS YOUTUBE?
 
 * Youtube is one of most popular video sharing system that presents for the people. Users can easily share, upload, view, rate, comment 
 videos via the system. Users can register the system and use the system by their account. Youtube also is one the best systems that 
@@ -6,7 +6,7 @@ recommend videos to users according to their interest. This means that people ca
 Moreover, with having the special account on Youtube, users can follow other users or channels. Additionally, as we mentioned above, 
 users can comment videos regardless of whether they are logged in or not.
 
-## REQUIREMENTS AND GOALS OF THE SYSTEM
+### REQUIREMENTS AND GOALS OF THE SYSTEM
 
 * As you know, Youtube is one the biggest system today’s world, however, we can design the main features of the Youtube. Although there 
 are a lot of different hard process to design Youtube, regardless of the recommendation system, channels, my favourite videos feature, 
@@ -47,7 +47,7 @@ videos as soon as possible.
 * Extended requirements mainly for improving system performance. To illustrate this, the system can be monitored to define usability 
   and durability.
 
-## CAPACITY ESTIMATION
+### CAPACITY ESTIMATION
 
 To estimate the capacity of the scalable system, we should focus on the total user, active user, number of coming request and data. 
 All these features can be considered for next 10 years because when we do that, we can easily handle the scaling problems that we can 
@@ -84,7 +84,7 @@ In general, a cache is estimated according to daily storage. To estimate the cac
 An internet connection with a larger bandwidth can move a set amount of data much faster than an internet connection with a lower 
 bandwidth. Bandwith is calculated according to both of download and upload operations for a second.
 
-## DATABASE DESIGN
+### DATABASE DESIGN
 
 * There are two choices to define the database schema. These are SQL and NoSQL. We can use traditional database management system like MsSQL or MySQL to keep data. As you know, we should keep information about videos and users into RDBMS.  Other information about videos, called metadata, should be kept too. Now we have main three tables to keep data. (Notice that we just only think the basic properties of Youtube. We can forget the recommendation system).
 
@@ -121,7 +121,7 @@ bandwidth. Bandwith is calculated according to both of download and upload opera
     * CommentDate (DateTime)
 ```
 
-## API DESIGN
+### API DESIGN
 
 * A lot of systems support mobile platform so APIs are the best choices to be able to provide the distinction between 
 developers and support mobile support as well. We can use REST or SOAP. A lot of huge companies prefer to REST or SOAP according to 
@@ -146,7 +146,7 @@ and etc…
 
 If we talk about the real Youtube service, SearchVideo API considers the recommendation.
 
-## HIGH-LEVEL DESIGN PROCESS
+### HIGH-LEVEL DESIGN PROCESS
 
 There are basic features found in web-based systems. The main ones are client, web server, application server, database and cache 
 systems. Depending on the intensity of system traffic, the number of servers or services increases and the load balancer distributes 
@@ -188,7 +188,7 @@ database. A load balancer can be placed each layer of the system such as between
 between the application server and metadata database etc…
 When a server responds the request to the client, related data is cached according to the cache process.
 
-## OPTIMIZATION OF THE SYSTEM
+### OPTIMIZATION OF THE SYSTEM
 
 As we know, Youtube is huge video sharing system. Users can upload videos and the number of uploading videos grows exponentially day 
 by day. According to uploading videos, there may one more same video in the system. To eliminate the duplication of videos we can 
@@ -197,7 +197,7 @@ is already kept in the system or not. If the system has already this video, then
 unnecessary use of space. Additionally, if incoming video includes a video kept in the system, then we can divide videos into small 
 chunks and we just give the only reference to same video chunks to handle the duplication problem.
 
-## SHARDING PROCESS
+### SHARDING PROCESS
 
 As we mentioned above, sharding ensures that the system is more reliable and available. There can be two types of sharding process 
 which are userID based and videoID based. Notice that userID based sharding process may cause problems. To illustrate this, when we 
@@ -206,7 +206,7 @@ we can face a fit problem. Another problem for sharding based on userID is a uni
 data size. This causes that system can be distributed non-uniformly. When we shard data according to videoID, we can eliminate these 
 two problems.
 
-## REPLICATION PROCESS
+### REPLICATION PROCESS
 
 As we mentioned above, the replication process is a valuable process to provide high availability, high reliability and real-time 
 experience. As you know, it is recommended to have 3 or more replicas for each server and service. If our system has 2 more replicas 
@@ -215,7 +215,7 @@ more reliable and available. We can keep same data onto three different resource
 the system automatically continues to work replicas. One more advantage of replication is the system may continue to run at an update 
 to the system.
 
-## LOAD BALANCING
+### LOAD BALANCING
 
 Load balancing refers to distributing requests across a group of services and servers. When we have talked about the replication and 
 sharding, an incoming request must be directed and this is done by a load balancer. We can use Round-Robin method to redirect incoming 
@@ -224,7 +224,7 @@ sending requests to a server exposed to heavy traffic. We can prepare intelligen
 Additionally, we can use consistent hashing to redirect incoming requests. Consistent hashing ensures that system becomes more 
 uniformly distributed.
 
-## CACHING MECHANISM
+### CACHING MECHANISM
 
 There can be two types of caching mechanism in our system.
 
@@ -237,13 +237,13 @@ because when we keep cache data on the same server, this means we have limited c
 on different servers we have more capacity. However, using a different server for caching mechanism cause latency problem. LRU 
 principle is a good way to set up a cache mechanism.
 
-## DESIGN CONSIDERATION
+### DESIGN CONSIDERATION
 
 Video uploading is a big process. When it fails, the system should ensure that it should continue to upload video from the failing point.
 Video encoding process should include the queue operations. When an uploaded video comes, this new task is added to a queue and all tasks 
 in the queue are taken one by one from a queue.
 
-## BASIC CODING OF SYSTEM
+### BASIC CODING OF SYSTEM
 ```bash
 public class Server{
     ArrayList<Machine> machines = new ArrayList<Machine>();
