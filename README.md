@@ -1,6 +1,6 @@
 # Large-Scale-System-Design
 
-This repository contains designs about how to built scale systems in detail.
+This repository contains designs of how to built scale systems around structure and cloud base.
 In designing procedure;
 
 - What system requirements are
@@ -14,7 +14,7 @@ In designing procedure;
 - How system is designed at final stage
 - Which cloud services can be used are explained in detail.
 
-------- SYSTEMS THAT ARE EXPLAINED -----------
+## Explained Systems
 
 - Foursquare Design
 - Yelp Design
