@@ -3,8 +3,7 @@
 * Youtube is one of most popular video sharing system that presents for the people. Users can easily share, upload, view, rate, comment 
 videos via the system. Users can register the system and use the system by their account. Youtube also is one the best systems that 
 recommend videos to users according to their interest. This means that people can continue with the these suggested videos. 
-Moreover, with having the special account on Youtube, users can follow other users or channels. Additionally, as we mentioned above, 
-users can comment videos regardless of whether they are logged in or not.
+Moreover, with having the special account on Youtube, users can follow other users or channels. Additionally, users can comment videos regardless of whether they are logged in or not.
 
 ### REQUIREMENTS AND GOALS OF THE SYSTEM
 
