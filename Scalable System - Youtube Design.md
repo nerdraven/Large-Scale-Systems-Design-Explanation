@@ -1,13 +1,13 @@
 ### WHAT IS YOUTUBE?
 
-* Youtube is one of most popular video sharing system that presents for the people. Users can easily share, upload, view, rate, comment 
+Youtube is one of most popular video sharing system that presents for the people. Users can easily share, upload, view, rate, comment 
 videos via the system. Users can register the system and use the system by their account. Youtube also is one the best systems that 
 recommend videos to users according to their interest. This means that people can continue with the these suggested videos. 
 Moreover, with having the special account on Youtube, users can follow other users or channels. Additionally, users can comment videos regardless of whether they are logged in or not.
 
 ### REQUIREMENTS AND GOALS OF THE SYSTEM
 
-* As you know, Youtube is one the biggest system today’s world, however, we can design the main features of the Youtube. Although there 
+Youtube is one the biggest system today’s world, however, we can design the main features of the Youtube. Although there 
 are a lot of different hard process to design Youtube, regardless of the recommendation system, channels, my favourite videos feature, 
 most popular videos, detailed search mechanism, we can design the Youtube according to other features listed below,
 
