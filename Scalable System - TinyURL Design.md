@@ -11,9 +11,7 @@ database and return the short URL to the user. Notice that short URL’s should 
 the system should redirect the user to actual URL. Notice that this short URL should have an expire time. Moreover, some performance 
 of the system should be provided.
 
-The system should be highly reliable. This means that every actual URL should be saved and not deleted.
-
-The system should have a minimum latency. This means that when a user enters the short URL, the user should quickly redirect the actual 
+The system should be highly reliable. This means that every actual URL should be saved and not deleted. The system should have a minimum latency. This means that when a user enters the short URL, the user should quickly redirect the actual 
 URL with minimum latency. For this purpose, we use data sharding and caching.
 
 The system should be highly available. This means that when the user enters the short URL, he or she should reach the actual URL at the 
