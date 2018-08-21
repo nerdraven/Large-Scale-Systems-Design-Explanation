@@ -14,7 +14,7 @@ In designing procedure;
 - How system is designed at final stage
 - Which cloud services can be used are explained in detail.
 
-## Explained Systems
+## Examples of Scalable System Architecture
 
 - Foursquare Design
 - Yelp Design
