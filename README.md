@@ -6,6 +6,7 @@ In designing procedure;
 - What system requirements are
 - What system capacity is
 - What system APIs are
+- How to use storage
 - How system is designed at the first stage
 - How system databases choose and design (NoSQL or RDMBS)
 - How data is stored
